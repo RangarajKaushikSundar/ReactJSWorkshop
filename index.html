@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello React!</title>
+  <style>
+    .defaultButton {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .redButton {
+      background-color: #f44336;
+    }
+
+    .grayButton {
+      background-color: white;
+      color: black;
+      border: 2px solid #e7e7e7;
+    }
+    .grayButton:hover {
+      background-color: #e7e7e7;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="example"></div>
+
+  <!-- Dependencies -->
+  <script src="./node_modules/react/umd/react.development.js"></script>
+  <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+
+  <!-- Main -->
+  <script src="./dist/main.js"></script>
+  <button class="defaultButton" id="myButton" onclick="toggleComponents()">Show components</button>
+  <script type="application/javascript">
+    let isComponentLoaded = false;
+
+    function toggleComponents() {
+      const mybutton = document.getElementById("myButton");
+      if (isComponentLoaded) {
+        mybutton.innerText = "Show Component";
+        mybutton.classList.remove('redButton');
+        window.destroyComponent();
+      } else {
+        mybutton.innerText = "Destroy Component";
+        mybutton.classList.add('redButton');
+        window.showComponent();
+      }
+      isComponentLoaded = !isComponentLoaded;
+      return;
+    }
+  </script>
+</body>
+
+</html>

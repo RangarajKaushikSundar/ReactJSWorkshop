@@ -1,0 +1,27 @@
+.closeButton {
+  background-color: #4287f5;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 7.5px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.modal {
+  display: block;
+  border: 5px solid #4287f5;
+  z-index: 1;
+  font-family: "Roboto script=all rev=1", "Adobe Blank";
+  top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+}
