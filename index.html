@@ -30,11 +30,20 @@
     .grayButton:hover {
       background-color: #e7e7e7;
     }
+
+    .large {
+      border: 2px solid #4CAF50;
+      padding-left: 1%;
+      padding-top: 1%;;
+      width: 90vw;
+      height: 70vh;
+    }
+
   </style>
 </head>
 
 <body>
-  <div id="example"></div>
+  <div class="" id="example"></div>
 
   <!-- Dependencies -->
   <script src="./node_modules/react/umd/react.development.js"></script>
@@ -51,10 +60,12 @@
       if (isComponentLoaded) {
         mybutton.innerText = "Show Component";
         mybutton.classList.remove('redButton');
+        document.getElementById("example").classList.remove('large');
         window.destroyComponent();
       } else {
         mybutton.innerText = "Destroy Component";
         mybutton.classList.add('redButton');
+        document.getElementById("example").classList.add('large');
         window.showComponent();
       }
       isComponentLoaded = !isComponentLoaded;

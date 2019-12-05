@@ -1,0 +1,13 @@
+.common {
+    width: 100%;
+    height: 90%;
+}
+.dark {
+    background:rgba(0, 0, 0, 0.281);
+    z-index:-1;
+}
+
+.light {
+    background: white;
+    z-index:0;
+}
